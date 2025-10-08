@@ -14,6 +14,10 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+#output:C:\offline\night\night_demo
+import os
+tem_dir = os.path.join(BASE_DIR,'templates')
+#output: C:\offline\night\night_demo\templates
 
 
 # Quick-start development settings - unsuitable for production
@@ -56,7 +60,7 @@ ROOT_URLCONF = 'night_demo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [tem_dir],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
